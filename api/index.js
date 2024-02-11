@@ -21,7 +21,14 @@ const connect = async () => {
 };
 
 // middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://booking-com-clone-admin.vercel.app"],
+    method: ["POST", "GET"],
+    credentials: true,
+  })
+);
+
 app.use(cookieParser());
 app.use(express.json());
 
