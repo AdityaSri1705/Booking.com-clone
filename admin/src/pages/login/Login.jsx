@@ -22,10 +22,14 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
+<<<<<<< HEAD
       const res = await axios.post(
         "https://booking-com-clone-admin.vercel.app",
         credentials
       );
+=======
+      const res = await axios.post("/api/auth/login", credentials);
+>>>>>>> e03581f97e15a63dc853c994d8338e4761912d5e
       if (res.data.isAdmin) {
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
 
