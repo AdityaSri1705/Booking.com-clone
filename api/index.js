@@ -23,7 +23,7 @@ const connect = async () => {
 // middlewares
 app.use(
   cors({
-    origin: ["https://booking-com-clone-admin.vercel.app"],
+    origin: ["https://booking-com-clone-aut1.vercel.app"],
     method: ["POST", "GET"],
     credentials: true,
   })
